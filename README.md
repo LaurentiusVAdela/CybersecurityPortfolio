@@ -39,8 +39,8 @@ This repository contains a **collection of cybersecurity projects, reports, and 
 
 ## 👤 About Me  
 🔹 **Name:** Laurentius Valdi Adela  
-📧 **Contact:** [Your Email or LinkedIn]  
-🔗 **Portfolio:** [Your GitHub/Personal Website]  
+📧 **Contact:** [valdilaurentius@gmail.com]
+🔗 **Portfolio:** [https://github.com/LaurentiusVAdela]  
 
 ---
 
