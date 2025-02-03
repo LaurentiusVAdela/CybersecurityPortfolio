@@ -44,4 +44,4 @@ This repository contains a **collection of cybersecurity projects, reports, and 
 
 ---
 
-🚀 **Feel free to explore this portfolio!** If you have questions, open an **issue** or reach out via **LinkedIn or email**.  
+🚀 **Feel free to explore this portfolio!** If you have questions, open an **issue** or reach out via **email**.  
