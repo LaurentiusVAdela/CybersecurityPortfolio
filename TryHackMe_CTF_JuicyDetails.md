@@ -34,3 +34,30 @@ The attacker targeted the web server using various tools, identified through the
 3. `sqlmap` – SQL Injection against `/rest/products/search`
 4. `curl` – Manual SQLi via HTTP requests
 5. `feroxbuster` – Directory brute-forcing
+
+---
+
+## 🔍 Endpoint Analysis
+
+| Endpoint                | Vulnerability      | Tool Used        |
+| ----------------------- | ------------------ | ---------------- |
+| `/rest/user/login`      | Brute-force login  | `hydra`          |
+| `/rest/products/search` | SQL Injection      | `sqlmap`, `curl` |
+| `/ftp`                  | Exposed file store | `feroxbuster`    |
+
+- The **`q` parameter** in `/rest/products/search` was exploited using SQL Injection.
+- The `/ftp` directory contained backup files:
+  - `coupons_2013.md.bak`
+  - `www-data.bak`
+
+---
+
+## 📥 Sensitive Data Accessed
+
+### 🎯 Data extracted via SQL Injection:
+
+- `email`
+- `password`  
+  (from the `Users` table using a UNION-based SQLi)
+
+---
