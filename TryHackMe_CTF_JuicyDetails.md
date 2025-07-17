@@ -20,3 +20,17 @@ You are a SOC Analyst for one of the world’s most popular juice shops. An atta
 2. Discover which endpoints were vulnerable
 3. Analyze what sensitive data was accessed
 4. Trace how the attacker escalated access
+
+---
+
+## 🧪 Reconnaissance
+
+The attacker targeted the web server using various tools, identified through the `access.log` file by inspecting their **User-Agent** headers and request patterns.
+
+### 🧰 Tools used by attacker (in order):
+
+1. `nmap` – Port/service scanning
+2. `hydra` – Brute-force attack on `/rest/user/login`
+3. `sqlmap` – SQL Injection against `/rest/products/search`
+4. `curl` – Manual SQLi via HTTP requests
+5. `feroxbuster` – Directory brute-forcing
