@@ -113,3 +113,19 @@ The attacker then moved laterally:
 - Exploited exposed FTP and SSH services with weak credentials and anonymous access.
 
 ---
+
+## 🔒 Recommendations
+
+- Disable anonymous FTP access immediately.
+- Block brute-force attempts using `fail2ban` or rate-limiting.
+- Sanitize input on vulnerable endpoints (`/rest/products/search`).
+- Prevent service accounts like `www-data` from SSH access.
+- Regularly monitor logs for suspicious access patterns.
+
+---
+
+## 📁 Files Used
+
+- `auth.log`
+- `vsftpd.log`
+- `access.log`
