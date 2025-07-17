@@ -61,3 +61,55 @@ The attacker targeted the web server using various tools, identified through the
   (from the `Users` table using a UNION-based SQLi)
 
 ---
+
+## 📁 File Access Attempts
+
+The attacker discovered the `/ftp` directory and attempted to retrieve:
+
+- `coupons_2013.md.bak`
+- `www-data.bak`
+
+**Service used:** `ftp`  
+**User:** `anonymous`
+
+✔️ The `vsftpd.log` confirmed successful downloads of these files.
+
+---
+
+## 🔓 Shell Access
+
+The attacker then moved laterally:
+
+- Used **brute-force SSH** login attempts against the `www-data` user.
+- Successfully authenticated as:
+  ```
+  ssh, www-data
+  ```
+
+**Confirmed in `auth.log` at:**
+
+```
+11/Apr/2021:09:41:19 +0000
+```
+
+---
+
+## 🧠 Attacker Movement Timeline
+
+| Time          | Action                                       |
+| ------------- | -------------------------------------------- |
+| ~09:35        | Anonymous FTP login & file download          |
+| ~09:36–09:38  | Brute-force attempts via SSH (`hydra`)       |
+| 09:41:19      | SSH access gained as `www-data`              |
+| 09:16:31      | Successful web login confirmed (HTTP 200)    |
+| Shortly after | SQL injection of user data & password hashes |
+
+---
+
+## 🧠 Analysis and Findings
+
+- The attacker scraped **product review pages** to identify user emails.
+- Used brute-force attacks and SQL Injection to access sensitive data.
+- Exploited exposed FTP and SSH services with weak credentials and anonymous access.
+
+---
