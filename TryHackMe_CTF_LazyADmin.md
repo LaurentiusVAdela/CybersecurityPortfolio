@@ -176,3 +176,23 @@ Gained root shell.
 - **Root Flag:** `THM{6637f41d0177b6f37cb20d775124699f}`
 
 ---
+
+## 🔒 Prevention Recommendations
+
+1. **Update software** to patch known CVEs (SweetRice).
+2. **Restrict backup file access** to authenticated users only.
+3. **Limit sudo permissions** — avoid allowing scripts to be executed as root by low-priv users.
+4. **Use 2FA** and strong password policies.
+5. **Sanitize file uploads** to block `.php`, `.phtml`, etc.
+6. **Use file integrity monitoring** on critical config files.
+
+---
+
+## ✅ Summary
+
+✔️ Enumerated services and discovered vulnerable CMS  
+✔️ Exploited exposed SQL backup to gain credentials  
+✔️ Logged into admin panel and uploaded reverse shell  
+✔️ Escalated privileges using insecure Perl script  
+✔️ Captured user and root flags  
+✔️ Documented attack flow and suggested remediations
