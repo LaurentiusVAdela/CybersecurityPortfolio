@@ -48,3 +48,21 @@ steghide extract -sf "Invitation Card.jpg"
 The extracted file: `Dalgona.png`.
 
 ---
+
+### 🔦 Q3: What hint text can be discovered in the final file?
+
+**Answer:** `Red Pixel`
+
+**Method:**  
+Analyzed `Dalgona.png` using **Stegsolve**:
+
+```bash
+java -jar stegsolve.jar
+```
+
+Steps:
+
+- Opened the file
+- Scrolled through layers (Gray Bits layer revealed "Red Pixel" as a message)
+
+This clue led to the next layer of hidden content.
