@@ -91,3 +91,33 @@ Used **PixSpy** and **dCode.fr** to extract and decode RGB values:
 The resulting string revealed the final flag.
 
 ---
+
+## 🏁 Summary of Flags
+
+| Question | Flag                   |
+| -------- | ---------------------- |
+| Q1       | 86504006               |
+| Q2       | Dalgona.png            |
+| Q3       | Red Pixel              |
+| Q4       | SBT{S4v3_My4nm4r_Guy5} |
+
+---
+
+## 🔒 Tools Used
+
+- `steghide`
+- `stegsolve.jar`
+- `PixSpy`
+- `dCode.fr`
+- `exiftool`, `strings`, `xxd`, `binwalk`
+
+---
+
+## ✅ Lessons Learned
+
+- Hidden clues can require **multi-layered image analysis**.
+- Always check for **steganography** when dealing with challenge images.
+- Tools like PixSpy and Stegsolve are excellent for forensic CTFs.
+- Password reuse across challenge steps is a useful trick.
+
+---
