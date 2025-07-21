@@ -18,3 +18,14 @@ A mysterious Squid Game invitation contains clues leading to a hidden message an
 - Cipher decoding
 
 ---
+
+## 🧩 Questions and Steps
+
+### 🔍 Q1: What is the phone number on the invitation card in Squid Game?
+
+**Answer:** `86504006`
+
+**Method:**  
+Basic OSINT search (Google image/text reference). This was a warm-up flag.
+
+---
