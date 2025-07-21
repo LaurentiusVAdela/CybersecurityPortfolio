@@ -66,3 +66,28 @@ Steps:
 - Scrolled through layers (Gray Bits layer revealed "Red Pixel" as a message)
 
 This clue led to the next layer of hidden content.
+
+---
+
+### 🧬 Q4: What is the final flag?
+
+**Answer:** `SBT{S4v3_My4nm4r_Guy5}`
+
+**Method:**
+
+Used **PixSpy** and **dCode.fr** to extract and decode RGB values:
+
+1. Opened `Dalgona.png` on [PixSpy](https://29a.ch/photo-forensics/#forensic-magnifier)
+2. Zoomed into a vertical line of red pixels near the map image
+3. Manually extracted red values in order:
+
+```
+123, 102, 124, 173, 123, 64, 166, 63, 137, 115, 171, 64,
+156, 155, 64, 162, 137, 107, 165, 171, 65, 175
+```
+
+4. Used [dCode ASCII Converter](https://www.dcode.fr/ascii-code) to convert these values
+
+The resulting string revealed the final flag.
+
+---
