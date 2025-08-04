@@ -1,4 +1,4 @@
-# 🛡️ Google Cybersecurity Portfolio 🔒
+# 🛡️ Cybersecurity Portfolio 🔒
 
 Welcome to my cybersecurity portfolio — a showcase of technical projects, CTF walkthroughs, and reports completed as part of my professional development and hands-on training in cybersecurity.
 
