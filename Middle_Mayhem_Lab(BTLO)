@@ -1,0 +1,23 @@
+# 🕵️ Middle Mayhem Lab (BTLO)  
+
+## 📌 Scenario  
+The SOC team at **MiddleMayhem Inc.** detected unusual network traffic directed at their admin portal. No confirmed breaches were initially observed.  
+I was tasked with analyzing **SIEM logs in Splunk Enterprise** to identify how attackers:  
+- Bypassed authentication  
+- Gained remote code execution  
+- Moved laterally through the network  
+
+---
+
+## 🔎 Findings  
+
+### **1. JavaScript Framework Identification**
+- Accessed the website via the browser.  
+- Identified the framework: **Next.js v15.0.0**  
+
+---
+
+### **2. Attacker IP Address**
+- Used Splunk query:  
+  ```spl
+  host="webapp" sourcetype="network"
